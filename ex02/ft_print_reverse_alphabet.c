@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 13:44:41 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/05/27 14:11:35 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/05/29 13:11:10 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putchar(char c)
 {
-	write(1, &c, 1);
+	write (1, &c, 1);
 }
 
 void	ft_print_reverse_alphabet(void)
@@ -24,7 +24,7 @@ void	ft_print_reverse_alphabet(void)
 	alphabet = 'z';
 	while (alphabet >= 'a')
 	{
-		ft_putchar(alphabet);
+		ft_putchar (alphabet);
 		alphabet--;
 	}
 }
