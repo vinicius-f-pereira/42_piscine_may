@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/04 03:00:43 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/06/04 03:12:01 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/06/04 20:44:43 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,8 @@ void	ft_ultimate_div_mod(int *a, int *b)
 
 	div = *a / *b;
 	mod = *a % *b;
-
 	*a = div;
 	*b = mod;
-//	printf("%d, %d\n", *a, *b);
 }
 /*int	main(void)
 {
@@ -32,4 +30,5 @@ void	ft_ultimate_div_mod(int *a, int *b)
 	int b = 2;
 
 	ft_ultimate_div_mod(&a, &b);
+	printf("%d, %d\n" a, b);
 }*/
