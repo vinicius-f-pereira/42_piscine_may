@@ -6,7 +6,7 @@
 /*   By: vde-frei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 20:13:51 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/06/05 20:42:04 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/06/07 00:06:20 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,4 @@ void	ft_putstr(char *str)
     {
             ft_putchar(*str++);
     }
-}
-
-int main(void)
-{
-    ft_putstr("Hello World");
-    return 0;
 }
