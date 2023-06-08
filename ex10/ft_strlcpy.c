@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/07 00:22:17 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/06/07 20:45:43 by vde-frei         ###   ########.fr       */
+/*   Created: 2023/06/08 05:29:29 by vde-frei          #+#    #+#             */
+/*   Updated: 2023/06/08 07:21:09 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-void	*ft_strcpy(char *dest, char *src);
-
-void	*ft_strcpy(char *dest, char *src)
+unsigned	int	ft_strlcpy(char	*dest, char *src, unsigned int size)
 {
-	int	i;
+	int len;
 
-	i = 0;
-	while (*src)
+	len = 0;
+	while(*(src + len) && --size)
 	{
-		*(dest + i++) = *src++;
-		*(dest + i) = '\0';
+		*dest++ = *(src + len++);
 	}
-		return (dest);
-}
-
-int	main(void)
-{
-	char	a[] = "Hello";
-	char	b[] = "World";
-
-	ft_strcpy(a, b);
-	printf("%s\n%s\n", a, b);
+	*dest = '\0';
+	while(*(src + len))
+	{
+		++len;
+	}
+	return(len);
 }

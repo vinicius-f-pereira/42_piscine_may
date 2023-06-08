@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/07 00:22:17 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/06/07 20:45:43 by vde-frei         ###   ########.fr       */
+/*   Created: 2023/06/07 18:20:51 by vde-frei          #+#    #+#             */
+/*   Updated: 2023/06/08 03:51:33 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-void	*ft_strcpy(char *dest, char *src);
-
-void	*ft_strcpy(char *dest, char *src)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
-	while (*src)
+	while(*src && n)
 	{
-		*(dest + i++) = *src++;
-		*(dest + i) = '\0';
+		*(dest + i++) = *src++; 
+		--n;
+	}
+	while(n--)
+	{
+		*(dest + i++) = '\0';
 	}
 		return (dest);
-}
-
-int	main(void)
-{
-	char	a[] = "Hello";
-	char	b[] = "World";
-
-	ft_strcpy(a, b);
-	printf("%s\n%s\n", a, b);
 }
