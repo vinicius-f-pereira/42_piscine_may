@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/07 18:20:51 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/06/08 10:31:11 by vde-frei         ###   ########.fr       */
+/*   Created: 2023/06/08 10:35:40 by vde-frei          #+#    #+#             */
+/*   Updated: 2023/06/08 10:40:17 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+int	ft_str_is_printable(char *str)
 {
-	unsigned int	i;
-
-	i = 0;
-	while (*src && n)
+	while (*str != '\0')
 	{
-		*(dest + i++) = *src++;
-		--n;
-	}
-	while (n--)
-	{
-		*(dest + i++) = '\0';
-	}
-	return (dest);
+		if (*str < 32 || *str >= 127)
+		{
+			++str;
+		}
+		return (0);
+	}	
+	return (1);
 }

@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/07 18:20:51 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/06/08 10:31:11 by vde-frei         ###   ########.fr       */
+/*   Created: 2023/06/08 10:42:12 by vde-frei          #+#    #+#             */
+/*   Updated: 2023/06/08 10:58:17 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+char	*ft_strupcase(char *str)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	while (*src && n)
+	while (str[i] != '\0')
 	{
-		*(dest + i++) = *src++;
-		--n;
+		if (str[i] >= 'a' && str[i] <= 'z')
+		{
+			str[i] -= 32;
+			i++;
+		}
 	}
-	while (n--)
-	{
-		*(dest + i++) = '\0';
-	}
-	return (dest);
+	return (str);
 }

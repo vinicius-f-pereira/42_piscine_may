@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/07 18:20:51 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/06/08 10:31:11 by vde-frei         ###   ########.fr       */
+/*   Created: 2023/06/08 08:40:07 by vde-frei          #+#    #+#             */
+/*   Updated: 2023/06/08 09:54:12 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+int	ft_str_is_lowercase(char *str)
 {
-	unsigned int	i;
-
-	i = 0;
-	while (*src && n)
+	while (*str != '\0')
 	{
-		*(dest + i++) = *src++;
-		--n;
+		if (*str >= 97 && *str <= 122)
+		{
+			++str;
+		}
+		else
+		{
+			return (0);
+		}
 	}
-	while (n--)
-	{
-		*(dest + i++) = '\0';
-	}
-	return (dest);
+	return (1);
 }
