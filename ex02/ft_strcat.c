@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 00:13:11 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/06/11 04:09:42 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/06/11 15:53:24 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ char	*ft_strcat(char *dest, char *src)
 //#include <stdio.h>
 //int    main(void)
 //{
-//    char    a[] = "Helloasdasd";
-//    char    b[] = "Worldaaa";
+//    char    a[] = "Helload";
+//    char    b[] = "Worlda ";
 //
 //    printf("%s, %s\n", a, b);
 //    ft_strcat(a, b);
