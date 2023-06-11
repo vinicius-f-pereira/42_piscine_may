@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 04:15:16 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/06/11 04:31:15 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/06/11 18:15:16 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ int	ft_strlen(char *str)
 	int	len;
 
 	len = 0;
-	while(*str)
+	while (*str)
 	{
 		len++;
 		str++;
@@ -30,13 +30,14 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 
 	i = 0;
 	dest_len = ft_strlen(dest);
-	while(src[i] != '\0' && nb)
+	while (src[i] != '\0' && nb)
 	{
 		dest[dest_len] = src[i];
 		dest_len++;
 		i++;
+		nb--;
 	}
-	dest[dest_len + 1] = '\0';
+	dest[dest_len] = '\0';
 	return (dest);
 }
 //#include <stdio.h>
@@ -45,7 +46,7 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 //	char a[] = "hello";
 //	char b[] = "worldas";
 //
-//	ft_strncat(a, b, 100);
+//	ft_strncat(a, b, 1);
 //	printf("%s", a);
 //	return (0);
 //}
